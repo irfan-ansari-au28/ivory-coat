@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="background_styles.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="./assets/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <script src="script.js" defer></script>
+    <title>Ivory Coat</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="#">
+        <div class="brand-logo">
+          <img
+            class="brand-icon"
+            src="./assets/images/brand-logo.png"
+            alt="ivory-coat"
+          />
+        </div>
+      </a>
+      <a href="#" class="toggle-button">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </a>
+      <div class="navbar-links">
+        <ul>
+          <li><a href="#">All Products</a></li>
+          <li><a href="#">Food Check</a></li>
+          <li><a href="#">Expert Advice</a></li>
+          <li><a href="#">Natural Nutrition</a></li>
+          <li><a href="#">Professionals</a></li>
+        </ul>
+      </div>
+      <div class="flag">
+        <div class="flag-text">AU</div>
+        <img
+          class="flag-icon"
+          src="./assets/images/aus.png"
+          alt="australia"
+          width="30"
+          height="20"
+        />
+        <i class="fa fa-search" aria-hidden="true"></i>
+        <i class="fa fa-user-o" aria-hidden="true"></i>
+      </div>
+    </nav>
+    <section>
+      <div class="hero">
+        <div class="heading">
+          Quality Australian
+          <br />
+          <span class="heading2">Made Products</span>
+        </div>
+        <div class="paragraph">
+          When it comes to care for your four-legged friend, your choice of
+          puppy food matters.
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="tab">
+        <button class="btn selected">DOG & PUPPY</button>
+        <button class="btn">CAT & KITTEN</button>
+      </div>
+    </section>
+    <section>
+      <div class="category">
+        <div id="categories"></div>
+        <!-- Card Layout
+           <div class="card">
+          <img class="card-image" src="./assets/images/all.png" />
+          <div class="card-title">Chilled</div>
+        </div>
+        <div class="card card-selected">
+          <img class="card-image" src="https" />
+          <div class="card-title">Chilled</div>
+        </div>
+        <div class="card">
+          <img class="card-image" src="https" />
+          <div class="card-title">Chilled</div>
+        </div> -->
+      </div>
+    </section>
+    <section>
+      <div class="products-container">
+        <div class="filter">
+          <div class="filter-title">FILTERS</div>
+          <div class="divider"></div>
+          <div class="recent-history">
+            <div class="search-history">X Chilled</div>
+            <div class="search-history">X Large</div>
+            <div class="clear-all">CLEAR ALL</div>
+          </div>
+          <div class="filter-type">
+            <div class="title-type">LIFE STAGE</div>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+          </div>
+          <div class="check-boxes">
+            <label class="container"
+              >Puppy (4)
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Adult (13)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Mature (4)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="divider"></div>
+          <div class="filter-type">
+            <div class="title-type">BREED SIZE</div>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+          </div>
+          <div class="check-boxes">
+            <label class="container"
+              >Small (4)
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Medium (13)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Large (4)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="divider"></div>
+          <div class="filter-type">
+            <div class="title-type">FOOD TYPE</div>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+          </div>
+          <div class="check-boxes">
+            <label class="container"
+              >All (28)
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Dry Dog Food (10)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Grain Free Dry (14)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Chilled (3)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Wet (5)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Grain Free Wet (5)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="divider"></div>
+          <div class="filter-type">
+            <div class="title-type">INGREDIENTS</div>
+            <i class="fa fa-chevron-up" aria-hidden="true"></i>
+          </div>
+          <div class="check-boxes">
+            <label class="container"
+              >Chicken (4)
+              <input type="checkbox" checked="checked" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Salmon (13)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Lamb (4)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Rice (4)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Turkey (13)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+            <label class="container"
+              >Ocean Fish (4)
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+            </label>
+          </div>
+          <div class="divider"></div>
+        </div>
+
+        <div class="products">
+          <div class="products-title">DRY DOG FOOD</div>
+          <div class="mobile-filter">
+            <i class="fa fa-sliders" aria-hidden="true"></i>
+            <div class="mobile-filter-title">Filters</div>
+            <div class="filter-count">
+              <div class="count-text">1</div>
+            </div>
+          </div>
+          <div class="products-count">39 Products</div>
+          <div class="products-wrapper">
+            <div id="products"></div>
+            <!-- <div class="products-card">
+              <div class="label">
+                <div class="save-lebel show">Save $20.00</div>
+                <div class="new show">New</div>
+              </div>
+              <div class="product-image card-active">
+                <img
+                  class="product-img"
+                  src="./assets/images/product-image.png"
+                  alt="dog-grain-dry"
+                />
+              </div>
+              <div class="product-selected selected-hide">
+                Order Free Sample
+              </div>
+              <div class="product-title">Kangaroo & Brown Rice 1Kg</div>
+              <div class="product-price-wrap">
+                <div class="maxm-price">RRP $19.99</div>
+                <div class="discount-price">$39.99</div>
+              </div>
+            </div>
+            <div class="products-card">
+              <div class="label">
+                <div class="save-lebel show">Save $20.00</div>
+                <div class="new show">New</div>
+              </div>
+              <div class="product-image">
+                <img
+                  class="product-img"
+                  src="./assets/images/product-image.png"
+                  alt="dog-grain-dry"
+                />
+              </div>
+              <div class="product-selected selected-hide">
+                Order Free Sample
+              </div>
+              <div class="product-title">Kangaroo & Brown Rice 1Kg</div>
+              <div class="product-price-wrap">
+                <div class="maxm-price">RRP $19.99</div>
+                <div class="discount-price">$39.99</div>
+              </div>
+            </div> -->
+          </div>
+          <div class="pagination">
+            <left class="arrow-left">
+              <img src="./assets/images/Prev_Contained_01.png" />
+            </left>
+            <div class="page1 page-selected">1</div>
+            <div class="page2">2</div>
+            <div class="page3">3</div>
+            <div class="arrow-right">
+              <img src="./assets/images/Next_Contained_01.png" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="about-us">
+        <div class="about-card">
+          <i class="fa fa-cube icon" aria-hidden="true"></i>
+          <div class="about-card-title">ORDER SAMPLE</div>
+          <div class="about-card-desc">
+            Order you free sample from us to try it out for your pet
+          </div>
+          <div class="slider-icon">
+            <div class="circle circle-selected">
+
+            </div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+            <div class="circle"></div>
+          </div>
+ 
+        </div>
+        <div class="about-card">
+          <i class="fa fa-phone icon" aria-hidden="true"></i>
+          <div class="about-card-title">CUSTOMER SERVICE</div>
+          <div class="about-card-desc">
+            We are available from Monday to Friday to answer your questions
+          </div>
+        </div>
+        <div class="about-card">
+          <i class="fa fa-envelope-o icon" aria-hidden="true"></i>
+          <div class="about-card-title">CONTACT US</div>
+          <div class="about-card-desc">
+            Need to contact us? Just send us an email at info@ivorycoat.com
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="newsletter">
+        <div class="news-card">
+          <form action="#">
+            <div class="news-letter-wrap">
+              <h4>Subscribe to our Newsletter</h4>
+            </div>
+            <div class="news-letter-title">Promotions, new products and sales.Directly <br/> to your inbox.</div>
+            <div class="input-wrap">
+          
+            <div class="" style="background-color:white">
+              <input type="text" placeholder="Your email" name="mail" required>
+            </div>
+          
+            <div class="submit">
+              <input type="submit" value="Subscribe">
+            </div>
+          </div>
+          </form>
+      </div>
+    </section>
+    <footer>
+      <div class="footer-wrap">
+        <div class="footer-logo">
+          <a href="#">
+            <img src="./assets/images/brand-logo.png" class="fl"/>
+          </a>
+        </div>
+        <div class="footer-column">
+          <div class="column">
+            <div class="column-title">SHOP</div>
+            <a href="#">
+            <div class="column-link">Dog & Puppy food</div>
+          </a>
+          <a href="#">
+            <div class="column-link">Cat & Kitten food</div>
+          </a>
+          <a href="#">
+            <div class="column-link">Other pet food</div>
+          </a>
+          </div>
+          <div class="column col2">
+            <div class="column-title">OUR STORY</div>
+            <a href="#">
+            <div class="column-link">About Ivory coat</div>
+          </a>
+          <a href="#">
+            <div class="column-link">FAQ</div>
+          </a>
+          <a href="#">
+            <div class="column-link">Contact Us</div>
+          </a>
+          <a href="#">
+            <div class="column-link">Get suppoart</div>
+          </a>
+          </div>
+          <div class="column col3">
+            <div class="column-title">MORE FROM IVORY COAT</div>
+            <a href="#">
+            <div class="column-link">Expert advice</div>
+          </a>
+          <a href="#">
+            <div class="column-link">Professionals(Breeders)</div>
+          </a>
+          <a href="#">
+            <div class="column-link">Find a stockist</div>
+          </a>
+          <a href="#">
+            <div class="column-link">Media Centre</div>
+          </a>
+          <a href="#">
+            <div class="column-link">Outback giveback</div>
+          </a>
+          </div>
+        </div>
+        <div class="footer-social">
+          <div class="social-title">FOLLOW US</div>
+          <div class="social-icon-wrap">
+            <i class="fa fa-twitter-square" aria-hidden="true"></i>
+            <i class="fa fa-facebook" aria-hidden="true"></i>
+            <i class="fa fa-instagram" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-bar">
+      <div class="currency-wrap">
+        <img src="./assets/images/aus.png" alt="australian-dollar" class="currency-flag">
+        <div class="currency-title">Australia (AUD $)</div>
+        <i class="fa fa-chevron-down " aria-hidden="true"></i>
+      </div>
+    </div>
+
+    </footer>
+  </body>
+</html>
